@@ -20,7 +20,6 @@ jobs:
 
   plan-dev:
     runs-on: ubuntu-latest
-
     environment: dev
 
     env:
@@ -54,9 +53,7 @@ jobs:
 
   plan-test:
     needs: plan-dev
-
     runs-on: ubuntu-latest
-
     environment: test
 
     env:
@@ -90,10 +87,8 @@ jobs:
 
   plan-prod:
     needs: plan-test
-
     runs-on: ubuntu-latest
-
-    environment: prod
+    environment: prod-plan
 
     env:
       ARM_USE_OIDC: true
